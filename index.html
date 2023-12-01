@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .controls button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Product Carousel</title>
+</head>
+<body>
+
+<div class="container mx-auto mt-8">
+    <div class="carousel" id="carousel">
+        <div class="slide">
+            <img src="https://images.hindustantimes.com/tech/img/2023/09/21/960x540/fb_1695273515215_1695273522698.jpg" style="height: 600px;" alt="Product 1">
+            <div class="product-info">
+                <h3>Product 1</h3>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/220px-Logo_of_Twitter.svg.png" style="height: 600px;" alt="Product 2">
+            <div class="product-info">
+                <h3>Product 2</h3>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://staticimg.amarujala.com/assets/images/2022/07/01/youtube_1656651687.png?w=414" style="height: 600px;" alt="Product 2">
+            <div class="product-info">
+                <h3>Product 3</h3>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://play-lh.googleusercontent.com/i_ZabizifODPnMgIMkyi_nIirJp73q6BbZWLkkUEiTIuHnQkuADH5xdEl2S-2LZubTA" style="height: 600px;" alt="Product 2">
+            <div class="product-info">
+                <h3>Product 4</h3>
+            </div>
+        </div>
+    </div>
+    <div class="controls">
+        <button onclick="prevSlide(); restartTimer();">Prev</button>
+        <button onclick="nextSlide(); restartTimer();">Next</button>
+    </div>
+    
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
